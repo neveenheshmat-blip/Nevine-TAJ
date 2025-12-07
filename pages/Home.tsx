@@ -106,9 +106,17 @@ export const Home: React.FC<HomeProps> = ({ onProductClick, onInstallApp, canIns
          
          <div ref={scrollRef} className="flex space-x-4 overflow-x-auto px-6 no-scrollbar snap-x scroll-smooth pb-4">
             
-            {/* Slide 1: Occasion/Wedding */}
+            {/* Slide 1: Occasion/Wedding - UPDATED IMAGE */}
             <div className="snap-center shrink-0 w-[90%] md:w-[45%] lg:w-[30%] relative rounded-2xl overflow-hidden aspect-[21/9] shadow-md hover:shadow-lg transition-shadow cursor-pointer group">
-              <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Wedding Hair" className="absolute inset-0 w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" />
+              <img 
+                src="/wigs-store.jpg" 
+                onError={(e) => {
+                  e.currentTarget.src = "https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80";
+                  e.currentTarget.onerror = null;
+                }}
+                alt="Wig Shop" 
+                className="absolute inset-0 w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" 
+              />
               <div className="absolute inset-0 bg-black/40 p-6 flex flex-col justify-center items-end text-right">
                 <span className="bg-primary-500 text-white text-[10px] font-bold px-2 py-1 rounded w-fit mb-2 self-end">GLOW UP</span>
                 <p className="text-white font-bold text-xl md:text-2xl leading-tight" dir="rtl">
