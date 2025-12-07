@@ -94,7 +94,12 @@
             .catch(registrationError => {
               console.log('SW registration failed: ', registrationError);
             });
-        });
+        }# Check if Git tracks index.html
+git ls-files public/index.html
+
+# List files in the public folder
+ls -la public
+);
       }
     </script>
   <script type="module" src="/index.tsx"></script>
